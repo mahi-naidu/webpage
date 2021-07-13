@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+ name: webpage-ingress
+ namespace: webpage
+spec:
+ rules:
+ - host: webpage.kkmn.info
+   http:
+     paths:
+     - path:
+       backend:
+         serviceName: webpage-svc
+         servicePort: 80
